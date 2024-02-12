@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Extractor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="inputSection">
+            <input type="text" id="domainInput" placeholder="Enter domain (e.g., example.com)">
+        </div>
+        <div id="formatSection">
+            <label class="custom-checkbox"><input type="checkbox" name="format" value="john.doe@domain.com"><span class="checkmark"></span> john.doe@domain.com</label>
+            <label class="custom-checkbox"><input type="checkbox" name="format" value="johnd@domain.com"><span class="checkmark"></span> johnd@domain.com</label>
+            <label class="custom-checkbox"><input type="checkbox" name="format" value="jdoe@domain.com"><span class="checkmark"></span> jdoe@domain.com</label>
+            <label class="custom-checkbox"><input type="checkbox" name="format" value="john@domain.com"><span class="checkmark"></span> john@domain.com</label>
+            <label class="custom-checkbox"><input type="checkbox" name="format" value="doej@domain.com"><span class="checkmark"></span> doej@domain.com</label>
+        </div>
+        <div id="actionSection">
+            <button id="goButton">Go</button>
+            <button id="downloadButton" disabled>Download</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
