@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const domainInput = document.getElementById('domainInput');
     const formatCheckboxes = document.querySelectorAll('input[name="format"]');
 
-    // Utility function to format email addresses based on names and selected format
     function formatEmailAddress(firstName, lastName, format, domain) {
         let email = format.replace('john.doe', `${firstName.toLowerCase()}.${lastName.toLowerCase()}`)
                           .replace('johnd', `${firstName.toLowerCase()}${lastName.charAt(0).toLowerCase()}`)
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return email;
     }
 
-    // Download the formatted email addresses as a text file
     function downloadFormattedEmails(names, selectedFormats, domain) {
         selectedFormats.forEach(format => {
             let emails = names.map(name => formatEmailAddress(name.firstName, name.lastName, format, domain));
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Handle the "Go" button click event
     goButton.addEventListener('click', function() {
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             chrome.tabs.sendMessage(tabs[0].id, {action: "extractNames"}, function(response) {
@@ -43,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle the "Download" button click event
     downloadButton.addEventListener('click', function() {
         const selectedFormats = Array.from(formatCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
         const domain = domainInput.value.trim();
