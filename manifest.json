@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Google Search Result Email Extractor",
+  "name": "smart-GatherContact",
   "version": "1.0",
   "description": "Extracts names from Google search results and formats them into email addresses.",
   "permissions": ["activeTab", "storage", "downloads"],
