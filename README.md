@@ -32,6 +32,9 @@ site:linkedin.com/in "Company Name"
 4. Click "Go" to extract names and generate email addresses.
 5. Once names are extracted, the "Download" button will enable, allowing you to download the results as a `.txt` file (Click multiple formates if needed).
 
+## Demo
+![](https://github.com/m4xx101/smart-GatherContact/blob/main/images/Demo.gif)
+
 ## Credits
 
 - Inspired by the methodologies of open-source tools such as WebPaste and GatherContacts.
